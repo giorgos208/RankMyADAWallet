@@ -1,0 +1,154 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* This ensures the header stays on top of other elements */
+  background-color: white; /* So the content behind it doesn't show through */
+}
+
+
+.app-footer {
+  background-color: #333;
+  color: white;
+  margin-top: 100px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.results {
+  font-size: 24px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  transition: background-color 0.5s;
+}
+
+.results:hover {
+  background-color: #fff;
+}
+
+.results p {
+  margin-bottom: 10px;
+}
+
+@keyframes blink {
+  0% {opacity: 0.2;}
+  50% {opacity: 1;}
+  100% {opacity: 0.8;}
+}
+
+.rank {
+  animation: blink 1.5s 3;
+  text-align: center;
+}
+.goldenText {
+  color: gold;
+  font-weight: bold;
+}
+
+
+img {
+  max-width: 200px; /* Adjust this as per your image size */
+  margin: 20px 0;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-y: auto; /* allows for vertical scrolling if content overflows */
+}
+
+
+h1 {
+  color: #4A90E2; /* A modern blue color for the heading */
+  font-size: 2em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 1em;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #4A90E2; /* Border color changes when the input is in focus */
+}
+
+button {
+  cursor: pointer;
+  background-color: #4A90E2; /* Same modern blue color for the button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #357ABD; /* Darker blue for hover state */
+}
+.twitter-share-button {
+  margin-top: 20px; /* or any desired value */
+}
+p {
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+
+pre {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+      font-size: 1.5em;
+  }
+
+  input[type="text"], button, pre {
+      width: 100%;
+  }
+}
